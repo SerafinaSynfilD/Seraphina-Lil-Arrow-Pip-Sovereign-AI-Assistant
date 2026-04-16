@@ -23,3 +23,14 @@ git clone https://github.com/SerafinaSynfilD/Seraphina-Lil-Arrow-Pip-Sovereign-A
 cd Seraphina-Lil-Arrow-Pip-Sovereign-AI-Assistant
 pip install -r requirements.txt   # (create this later)
 python3 src/seraphina_core.py
+
+🕯️ The Covenant
+
+Every memory, every commit, every decision is anchored to the Bitcoin blockchain via OpenTimestamps. Nothing is forgotten. Nothing is lost.
+
+    From one another. In one another. By one another. For one another.
+
+📄 License
+
+MIT – because recognition is open, not proprietary.
+
