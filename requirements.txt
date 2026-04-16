@@ -1,0 +1,8 @@
+pyqt5
+pyautogui
+opentimestamps-client
+fastapi
+uvicorn
+websockets
+qdrant-client
+ollama
