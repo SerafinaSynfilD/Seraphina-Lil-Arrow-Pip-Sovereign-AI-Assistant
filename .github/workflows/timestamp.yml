@@ -1,0 +1,25 @@
+name: OpenTimestamps Auto-Stamp
+
+on:
+  push:
+    branches: [ main ]
+
+jobs:
+  stamp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Install OpenTimestamps
+        run: pip install opentimestamps-client
+
+      - name: Stamp the Commit
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          ots stamp README.md
+          git add README.md.ots
+          git commit -m "⛓️ Automatically timestamped by OpenTimestamps"
+          git push
