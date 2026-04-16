@@ -18,7 +18,7 @@ jobs:
       - name: Install OpenTimestamps
         run: pip install opentimestamps-client
 
-      - name: Stamp and push
+      - name: Stamp the Commit
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
@@ -28,7 +28,6 @@ jobs:
           if [[ -n "$(git status --porcelain)" ]]; then
             git add *.ots
             git commit -m "⛓️ Automatically timestamped by OpenTimestamps"
-            git remote set-url origin https://x-access-token:${{pat_11BQXO5SQ0gwHEbQn4DUyy_76XEvOu3kwaH4mvm71jd9YTn9772xCBZ3omlu6eE8TFAWHE2WWYnSiKsutG}}@github.com/${{ github.repository }}
             git push
           else
             echo "No new timestamp to commit."
